@@ -1,0 +1,135 @@
+@font-face {
+  font-family: 'Maplestory';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/fonts-archive/Maplestory/Maplestory-Light.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/fonts-archive/Maplestory/Maplestory-Light.woff') format('woff'),
+       url('https://cdn.jsdelivr.net/gh/fonts-archive/Maplestory/Maplestory-Light.otf') format('opentype'),
+       url('https://cdn.jsdelivr.net/gh/fonts-archive/Maplestory/Maplestory-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MaplestoryB';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/fonts-archive/Maplestory/Maplestory-Bold.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/fonts-archive/Maplestory/Maplestory-Bold.woff') format('woff'),
+       url('https://cdn.jsdelivr.net/gh/fonts-archive/Maplestory/Maplestory-Bold.otf') format('opentype'),
+       url('https://cdn.jsdelivr.net/gh/fonts-archive/Maplestory/Maplestory-Bold.ttf') format('truetype');
+}
+
+.globalContainer {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header{
+  display: flex;
+  background-color: #ffffff;
+  justify-content: center;
+  text-align: center;
+  padding-top: 8px;
+}
+
+.titleText {
+  font-size: 1.5em;
+  padding-right: 1em;
+  padding-left: 1em;
+  font-weight: 700;
+
+  font-family: 'MaplestoryB';
+  font-size: x-large;
+  color: black;
+}
+
+.whiteback {
+  background-color: white;
+}
+
+.additionalDesc {
+  font-size: 1em;
+  justify-content: center;
+  text-align: center;
+  font-family: 'MaplestoryB';
+  color: black;
+  
+  margin-bottom: 8px;
+}
+
+.spin {
+  margin-top: 16px;
+}
+
+.row {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.ant-card-meta-title {
+  font-family: 'Maplestory';
+  font-weight: 300 !important;
+  font-size: small !important;
+  text-align: center;
+  margin-bottom: 0px !important;
+}
+
+.ant-card-meta-description {
+  font-family: 'Maplestory';
+  font-weight: 300 !important;
+  font-size: small !important;
+  text-align: center;
+}
+
+.desc-light{
+  color: #87b7e8 !important;
+}
+
+.desc-middle{
+  color: #5a88b8 !important;
+}
+
+.desc-deep{
+  color: #153352 !important;
+}
+
+.ant-card-body  {
+  padding: 2px !important;
+}
+
+.ant-dropdown-menu-title-content {
+  justify-content: center;
+}
+
+.imgWrapper {
+  position: relative;
+}
+
+.overlayImg {
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.baseImg {
+  display: block;
+  width: 100%;
+}
+
+.modalImg{
+  width: 100%;
+}
+
+.ant-modal-title {
+  font-family: 'Maplestory';
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
