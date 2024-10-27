@@ -41,16 +41,22 @@ function App() {
 
   const makeCard = (num) => {
     const items = [
-      { label: <div onClick={()=>onClickDone(num)}> {data[num] === 0? '완료' : '완료 취소'} </div>, key: '0'},
-      { label: <div onClick={()=>onClickLoc(num)}> 위치 보기 </div>, key: '1', disabled: fish[num]["loc_map"]? false : true},
+      { label: data[num] === 0? '완료' : '완료 취소', key: '0'},
+      { label: '위치 보기', key: '1', disabled: fish[num]["loc_map"]? false : true},
       // { type: 'divider'},
       // { label: <div onClick={()=>console.log('Close')}> 닫기 </div>, key: '3'},
     ];
 
+    const onClick = ({key}) => {
+      if (key === '0')
+        onClickDone(num);
+      else
+        onClickLoc(num);
+    }
     const fontColor = fish[num]['loc'] === '초입'? 'desc-light' : (fish[num]['loc'] === '중간수역'? 'desc-middle' : 'desc-deep')
 
     return (<Dropdown
-        menu={{ items, }}
+        menu={{ items, onClick}}
         trigger={['click']}>
         <a onClick={(e) => e.preventDefault()}>
         <Card hoverable bordered={false}
