@@ -6,7 +6,7 @@ import fish from './resource/fish';
 import { useState, useEffect } from 'react';
 
 import { Layout, Card, Col, Row } from 'antd';
-import { Dropdown, Spin, Modal } from 'antd';
+import { Dropdown, Spin, Modal, Button } from 'antd';
 
 const { Header, Footer } = Layout;
 const { Meta } = Card;
@@ -116,7 +116,7 @@ function App() {
               width={500}
               footer={(_, { OkBtn, CancelBtn }) => (
                 <>
-                  <CancelBtn />
+                  <Button onClick={handleCancel}> 닫기 </Button>
                 </>
               )}>
         <img src={fish[modalTarget]["loc_map"]} className="modalImg"/>
