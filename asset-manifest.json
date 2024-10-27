@@ -1,17 +1,36 @@
 {
   "files": {
     "main.css": "/maple-bluehole-collection/static/css/main.090ae7b0.css",
-    "main.js": "/maple-bluehole-collection/static/js/main.51629e77.js",
+    "main.js": "/maple-bluehole-collection/static/js/main.8f340cdf.js",
     "static/js/453.3193c8dc.chunk.js": "/maple-bluehole-collection/static/js/453.3193c8dc.chunk.js",
+    "static/media/28.png": "/maple-bluehole-collection/static/media/28.6b765feb4f72d607f689.png",
+    "static/media/20.png": "/maple-bluehole-collection/static/media/20.1ce6362ed63a87d2c295.png",
+    "static/media/25.png": "/maple-bluehole-collection/static/media/25.381cefde3b672ef96bfa.png",
+    "static/media/14.png": "/maple-bluehole-collection/static/media/14.2ee3c9b5bbb366f5688e.png",
     "static/media/6.png": "/maple-bluehole-collection/static/media/6.4794e0ee9e3ac6db55b4.png",
+    "static/media/26.png": "/maple-bluehole-collection/static/media/26.a1ebfa2b27527724b9e2.png",
     "static/media/8.png": "/maple-bluehole-collection/static/media/8.7b09c4024c650eb8d58b.png",
+    "static/media/27.png": "/maple-bluehole-collection/static/media/27.99a6eccb9d63c2930368.png",
+    "static/media/10.png": "/maple-bluehole-collection/static/media/10.490d87847c487f44150b.png",
+    "static/media/13.png": "/maple-bluehole-collection/static/media/13.4ec825ba6c1d7d24c3a6.png",
+    "static/media/9.png": "/maple-bluehole-collection/static/media/9.97af8a733fc46fd7d1d5.png",
+    "static/media/36.png": "/maple-bluehole-collection/static/media/36.d5d793f01ec368c6b3a3.png",
+    "static/media/11.png": "/maple-bluehole-collection/static/media/11.298951d39d9f21fe0e91.png",
+    "static/media/34.png": "/maple-bluehole-collection/static/media/34.0255cf9c46255a0bda97.png",
+    "static/media/15.png": "/maple-bluehole-collection/static/media/15.fbf2c2262a5ded293b2f.png",
+    "static/media/12.png": "/maple-bluehole-collection/static/media/12.a31ac3f2ce9091c17b65.png",
+    "static/media/37.png": "/maple-bluehole-collection/static/media/37.9bc9f3a281e50ad21cf0.png",
+    "static/media/35.png": "/maple-bluehole-collection/static/media/35.422cd1fe751bb4b73797.png",
+    "static/media/24.png": "/maple-bluehole-collection/static/media/24.d9e665108348e5b7b94b.png",
+    "static/media/38.png": "/maple-bluehole-collection/static/media/38.190ea95d28c6f3b334a2.png",
+    "static/media/39.png": "/maple-bluehole-collection/static/media/39.143d5c57fc43de628748.png",
     "index.html": "/maple-bluehole-collection/index.html",
     "main.090ae7b0.css.map": "/maple-bluehole-collection/static/css/main.090ae7b0.css.map",
-    "main.51629e77.js.map": "/maple-bluehole-collection/static/js/main.51629e77.js.map",
+    "main.8f340cdf.js.map": "/maple-bluehole-collection/static/js/main.8f340cdf.js.map",
     "453.3193c8dc.chunk.js.map": "/maple-bluehole-collection/static/js/453.3193c8dc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.090ae7b0.css",
-    "static/js/main.51629e77.js"
+    "static/js/main.8f340cdf.js"
   ]
 }
