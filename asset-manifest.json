@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/maple-bluehole-collection/static/css/main.090ae7b0.css",
-    "main.js": "/maple-bluehole-collection/static/js/main.daf3dd66.js",
+    "main.js": "/maple-bluehole-collection/static/js/main.51629e77.js",
     "static/js/453.3193c8dc.chunk.js": "/maple-bluehole-collection/static/js/453.3193c8dc.chunk.js",
     "static/media/6.png": "/maple-bluehole-collection/static/media/6.4794e0ee9e3ac6db55b4.png",
     "static/media/8.png": "/maple-bluehole-collection/static/media/8.7b09c4024c650eb8d58b.png",
     "index.html": "/maple-bluehole-collection/index.html",
     "main.090ae7b0.css.map": "/maple-bluehole-collection/static/css/main.090ae7b0.css.map",
-    "main.daf3dd66.js.map": "/maple-bluehole-collection/static/js/main.daf3dd66.js.map",
+    "main.51629e77.js.map": "/maple-bluehole-collection/static/js/main.51629e77.js.map",
     "453.3193c8dc.chunk.js.map": "/maple-bluehole-collection/static/js/453.3193c8dc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.090ae7b0.css",
-    "static/js/main.daf3dd66.js"
+    "static/js/main.51629e77.js"
   ]
 }
