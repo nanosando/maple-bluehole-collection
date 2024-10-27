@@ -65,7 +65,7 @@ function App() {
                 {data[num] === 1? <img src={clearIcon} className='overlayImg'/> : <></>}
                 <img src={fish[num]['img']} className='baseImg'/>
               </div>}>
-          <Meta title={fish[num]['name']} description={<div className={fontColor}>{fish[num]['loc']}</div>}
+          <Meta title={fish[num]['name']} description={<div className={fontColor}>{fish[num]['loc'] + (fish[num]["loc_map"]?'*':'')}</div>}
           />
         </Card>
         </a>
@@ -94,7 +94,9 @@ function App() {
         </a>
       </Header>
       <Layout className="whiteback">
-        <div className="additionalDesc"> *위치 보기는 일부 물고기만 지원합니다 </div>
+        <div className="additionalDesc"> - 물고기를 클릭하면 완료 표시/취소, 위치 보기가 가능합니다 </div>
+        <div className="additionalDesc"> - 위치 보기는 일부 물고기만 지원합니다(*표시) </div>
+        <div className="additionalDesc"> - 메이플 인벤 '법사캐'님의 지도를 사용하였습니다 </div>
         {
           loading? <Spin size="large" className="spin"/> : 
           [...Array(8)].map((x, r) =>
