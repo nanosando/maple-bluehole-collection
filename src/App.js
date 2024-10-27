@@ -2,13 +2,11 @@ import './App.css';
 import gLogo from './resource/github-mark.png';
 import clearIcon from './resource/clear.png'
 import fish from './resource/fish';
-import map from './resource/location/6.png';
 
 import { useState, useEffect } from 'react';
-import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
 import { Layout, Card, Col, Row } from 'antd';
-import { Dropdown, Spin, Button, Modal } from 'antd';
+import { Dropdown, Spin, Modal } from 'antd';
 
 const { Header, Footer } = Layout;
 const { Meta } = Card;
@@ -113,11 +111,7 @@ function App() {
                   <CancelBtn />
                 </>
               )}>
-        <TransformWrapper>
-          <TransformComponent>
-            <img src={fish[modalTarget]["loc_map"]} className="modalImg"/>
-          </TransformComponent>
-        </TransformWrapper>
+        <img src={fish[modalTarget]["loc_map"]} className="modalImg"/>
       </Modal>
       <Footer className="footer">
         <a href="https://github.com/nanosando" target="_blank">
