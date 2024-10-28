@@ -119,7 +119,7 @@ function App() {
   return (
     <Layout className="globalContainer">
       <Header className="header">
-        <a href="/">
+        <a href=".">
           <div className="titleText"> 메이플 블루홀 도감 </div>
         </a>
       </Header>
