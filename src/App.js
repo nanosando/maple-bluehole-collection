@@ -3,7 +3,8 @@ import gLogo from './resource/github-mark.png';
 import clearIcon from './resource/clear.png'
 import fish from './resource/fish';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { Fireworks } from '@fireworks-js/react';
 
 import { Layout, Card, Col, Row } from 'antd';
 import { Dropdown, Spin, Modal, Button } from 'antd';
@@ -17,6 +18,11 @@ function App() {
   const [modalTarget, setModalTarget] = useState(6);
   const [data, setData] = useState(Array(40).fill(0));
 
+  const [fireworkOn, setFireworkOn] = useState(false);
+  const [finModalOpen, setFinModalOpen] = useState(false);
+
+  const ref = useRef(null);
+
   const onClickLoc = (num) => {
     setModalTarget(num)
     setModalOpen(true);
@@ -25,6 +31,13 @@ function App() {
   const handleCancel = () => {
     setModalOpen(false);
   };
+
+  const handleFinModalCancel = () => {
+    setFinModalOpen(false);
+    ref.current?.waitStop(true);
+    setFireworkOn(false);
+  };
+
 
   const onClickDone = (num) => {
     var newData = data.slice();
@@ -37,14 +50,19 @@ function App() {
     setData(newData);
     localStorage.setItem('collection_data', JSON.stringify(newData));
     //console.log(newData);
+
+    let checker = arr => arr.every(v => v === 1);
+    if (checker(newData)) {
+      setFinModalOpen(true);
+      setFireworkOn(true);
+      ref.current?.start();
+    }
   }
 
   const makeCard = (num) => {
     const items = [
       { label: data[num] === 0? '완료' : '완료 취소', key: '0'},
       { label: '위치 보기', key: '1', disabled: fish[num]["loc_map"]? false : true},
-      // { type: 'divider'},
-      // { label: <div onClick={()=>console.log('Close')}> 닫기 </div>, key: '3'},
     ];
 
     const onClick = ({key}) => {
@@ -73,6 +91,18 @@ function App() {
   }
 
   useEffect(() => {
+    ref.current?.pause();
+    ref.current?.updateOptions({
+      acceleration: 1.02,
+      intensity: 10,
+      traceLength: 5,
+      traceSpeed: 5,
+      delay: {
+        min: 70,
+        max: 100,
+      },
+    });
+
     setLoading(true);
     var prevDataS = localStorage.getItem('collection_data');
     var prevData = JSON.parse(prevDataS);
@@ -120,6 +150,32 @@ function App() {
                 </>
               )}>
         <img src={fish[modalTarget]["loc_map"]} className="modalImg"/>
+      </Modal>
+      {finModalOpen? <div className='mask'></div> : <div className='mask-none'></div>}
+      {fireworkOn?<Fireworks
+        ref={ref}
+        style={{
+          maxWidth: '500px',
+          zIndex: '1000',
+          width: '100%',
+          height: '100%',
+          position: 'fixed',
+        }}
+      /> : <></>}
+      <Modal title="🎉축하합니다!🎉"
+              open={finModalOpen}
+              onCancel={handleFinModalCancel}
+              width={300}
+              mask={false}
+              closable={false}
+              footer={(_, { OkBtn, CancelBtn }) => (
+                <>
+                  <Button className='finModalButton' onClick={handleFinModalCancel}> 닫기 </Button>
+                </>
+              )}>
+        <p>도감 완성을 축하합니다.</p>
+        <p>이용해주셔서 감사합니다.</p>
+        <p>-메이플 인벤 네버버-</p>
       </Modal>
       <Footer className="footer">
         <a href="https://github.com/nanosando" target="_blank">
